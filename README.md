@@ -46,3 +46,17 @@ Things you may want to cover:
 - has_many :members
 - has_many :groups, through: :members
 - has_many :messages
+
+
+## messages テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|text|null: false|
+|image|string|
+|user_id|interger|null: false|
+|group_id|interger|
+
+### Association
+- belongs_to :user
+- belongs_to :group
