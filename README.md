@@ -60,3 +60,15 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :group
+
+##groups テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|interger|null: false|
+|user_id|interger|null: false|
+|body|text|null: false|
+
+### Association
+- has_many :users
+- has_many :messages
