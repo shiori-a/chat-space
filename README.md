@@ -65,9 +65,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|interger|null: false|
-|user_id|interger|null: false|
-|body|text|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :users
