@@ -52,7 +52,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text|
 |image|string|
 |user_id|interger|null: false|
 |group_id|interger|
