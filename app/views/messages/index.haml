@@ -1,0 +1,42 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title ChatSpace
+    %link{:href => "/app/assets/stylesheets/_index.scss", :rel => "stylesheet"}/
+  %body
+    .header
+      グループを作成しました。
+    .wrapper
+      .chat-side
+        .side-header
+          .side-header__box
+            %p.side-header__box__name test-user
+            .side-header__box__icon
+              %a{:href => "#"}
+                %i.fa.fa-edit
+              %a{:href => "#"}
+                %i.fa.fa-cog
+        .groups
+          .group
+            %h2.group-name test-user
+            %p.message さようなら
+      .chat-main
+        .main-header
+          .main-header__left-box
+            %h1.main-header__left-box__current-group test-group
+            %p.main-header__left-box__member Member: test-user
+            .main-header__edit Edit
+        .messages
+          .message
+            .message__info
+              %p.message__info__talker test-user
+              %p.message__info__date 2019/07/01(Mon) 12:00:00
+            %p.message__text こんにちわ！
+        .form
+          .input-box
+            %input.input-box__text{:placeholder => "type a message", :type => "text"}/
+            %label.input-box__image{for: "upload-icon"}
+              %i.fa.fa-image
+          %input.submit-btn{:type => "submit", :value => "Send"}/
