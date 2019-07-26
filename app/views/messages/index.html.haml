@@ -1,11 +1,4 @@
-%html
-  %head
-    %meta{content:  "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{charset: "UTF-8"}/
-    %title ChatSpace
-    %link{href: "/app/assets/stylesheets/_index.scss", rel: "stylesheet"}/
-  %body
-    .header
+.header
       グループを作成しました。
     .wrapper
       .chat-side
@@ -13,9 +6,9 @@
           .side-header__box
             %p.side-header__box__name test-user
             .side-header__box__icon
-              %a{href: "#"}
+            =link_to "#"
                 %i.fa.fa-edit
-              %a{href: "#"}
+            =link_to "#"
                 %i.fa.fa-cog
         .groups
           .group
