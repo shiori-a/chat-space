@@ -1,10 +1,9 @@
-!!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "UTF-8"}/
+    %meta{content:  "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "UTF-8"}/
     %title ChatSpace
-    %link{:href => "/app/assets/stylesheets/_index.scss", :rel => "stylesheet"}/
+    %link{href: "/app/assets/stylesheets/_index.scss", rel: "stylesheet"}/
   %body
     .header
       グループを作成しました。
@@ -14,9 +13,9 @@
           .side-header__box
             %p.side-header__box__name test-user
             .side-header__box__icon
-              %a{:href => "#"}
+              %a{href: "#"}
                 %i.fa.fa-edit
-              %a{:href => "#"}
+              %a{href: "#"}
                 %i.fa.fa-cog
         .groups
           .group
@@ -36,7 +35,7 @@
             %p.message__text こんにちわ！
         .form
           .input-box
-            %input.input-box__text{:placeholder => "type a message", :type => "text"}/
+            %input.input-box__text{placeholder: "type a message", type: "text"}/
             %label.input-box__image{for: "upload-icon"}
               %i.fa.fa-image
-          %input.submit-btn{:type => "submit", :value => "Send"}/
+          %input.submit-btn{type: "submit", value: "Send"}/
