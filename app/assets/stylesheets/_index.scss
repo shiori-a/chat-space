@@ -15,53 +15,55 @@ body, html{
 
 .wrapper{
   height: 100%;
-  &.chat-side{
+  .chat-side{
     height: 100%;
     width: 300px;
     color: white;
     float: left;
-    &.side-header{
+    .side-header{
       height: 100px;
       background-color: #253141;
       display: flex;
       align-items: center;
       padding: 0 20px;
-      &.side-header__box{
+      &__box{
         font-weight: bold;
         font-size: 16px;
         width: 100%;
         height: 100px;
         display: flex;
         justify-content: space-between;
-        &.side-header__box__name{
+        &__name{
           line-height: 100px;
         }
-        &.side-header__box__icon{
+        &__icon{
           line-height: 100px;
           color: white;
           display: flex;
+          width: 130px;
         }
-          &.fa{
+          .fa{
             color: white;
             text-decoration: none;
             padding-left: 5px;
+            line-height: 100px;
         }
       }
     }
-   &.groups{
+   .groups{
     height: calc(100vw - 100px);
     width: 300px;
     clear: both;
     background-color: #2f3e51;
     padding: 20px 20px 0;
-    &.group{
+    .group{
       margin-bottom: 40px;
-      &.group-name{
+      .group-name{
         font-weight: bold;
         font-size: 15px;
         padding-bottom: 5px;
       }
-      &.message{
+      .message{
         font-weight: bold;
         font-size: 11px;
       }
@@ -72,25 +74,25 @@ body, html{
   width: calc(100vw - 300px);
   float: left;
   height: 100%;
-  &.main-header{
+  .main-header{
     height: 100px;
     padding: 0 40px;
     border-bottom: solid 1px #eee;
     overflow: scroll;
-    &.main-header__left-box{
+    &__left-box{
       margin-top: 35px;
-      &.main-header__left-box__current-group{
+      &__current-group{
         font-size: 20px;
         color: #333;
         margin-bottom: 15px;
       }
-      &.main-header__left-box__member{
+      &__member{
         font-size: 12px;
         color: #999999;
         display: flex;
       }
     }
-    &.main-header__edit{
+    &__edit{
       height: 40px;
       line-height: 40px;
       padding: 0 20px;
@@ -101,44 +103,44 @@ body, html{
       color: #38aef0;
       }
     }
-    &.messages{
+    .messages{
       height: calc(100vw - 190px);
       padding: 46px 40px;
       background-color: #fafafa;
-      &.message{
+      .message{
         padding-bottom: 40px;
-        &.message__info{
+        &__info{
           margin-bottom: 10px;
           display: flex;
-        }
-        &.message__info__talker{
+        &__talker{
           color: #434a54;
           font-size: 16px;
           font-weight: bold;
         }
-        &.message__info__date{
+        &__date{
           color: #999999;
           font-size: 12px;
           margin-left: 10px;
         }
         }      
+      }
     }
-    &.form{
+    .form{
       height: 90px;
       padding: 20px 40px;
       background-color: #ddd;
-        &.input-box{
+        .input-box{
           position: relative;
           width: 75%;
           float: left;
-          &.input-box__text{
+          &__text{
             height: 50px;
             width: 100%;
             padding: 0 40px 0 10px;
             color: #434a54;
             border-style: none;
           }      
-          &.input-box__image{
+          &__image{
             position: absolute;
             top: 10px;
             right: 10px;
@@ -146,7 +148,7 @@ body, html{
             font-size: 20px;        
           }
         }
-        &.submit-btn{
+        .submit-btn{
           width: 100px;
           height: 50px;
           padding: 0 30px;
