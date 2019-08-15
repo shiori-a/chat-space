@@ -1,12 +1,12 @@
 .header
-  グループを作成しました。
+  
 .wrapper
   .chat-side
     .side-header
       .side-header__box
         %p.side-header__box__name test-user
         .side-header__box__icon
-        =link_to "#" do
+        =link_to "/users/#{current_user.id}/edit" do
           %i.fa.fa-edit
         =link_to "#" do
           %i.fa.fa-cog
