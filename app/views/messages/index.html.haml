@@ -6,21 +6,20 @@
   .chat-main
     .main-header
       .main-header__left-box
-        %h2.main-header__left-box__current-group test-group
+        %h2.main-header__left-box__current-group
+          = @group.name
         %p.main-header__left-box__members  Member : 
-        %p.main-header__left-box__member  test-user
+        %p.main-header__left-box__member
+          = @group_users
       .right-header
         .right-header__button Edit
     .messages
-      .message
-        .message__info
-          %p.message__info__user-name test-user
-          %p.message__info__date 2019/07/01(Mon) 12:00:00
-        .lower-message
-          %p.lower-message__content こんにちわ！
+      = render @messages
     .form
-      .input-box
-        %input.input-box__text{placeholder: "type a message", type: "text"}/
-        %label.input-box__image{for: "upload-icon"}
-          %i.fa.fa-image
-      %input.submit-btn{type: "submit", value: "Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__text', placeholder: 'type a mesassage'
+        .input-box
+          = f.label :image, class: 'input-box__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit-btn'
