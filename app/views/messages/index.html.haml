@@ -8,7 +8,7 @@
       .main-header__left-box
         %h2.main-header__left-box__current-group
           = @group.name
-        %p.main-header__left-box__members  Member : 
+        %p.main-header__left-box__members  Member : aaa
         %p.main-header__left-box__member
           = @group_users
       .right-header
@@ -18,7 +18,7 @@
       = render @messages
     .form
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__text', placeholder: 'type a mesassage'
+        = f.text_field :content, class: 'form__text', placeholder: 'type a message'
         .input-box
           = f.label :image, class: 'input-box__image' do
             = fa_icon 'picture-o', class: 'icon'

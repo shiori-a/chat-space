@@ -246,6 +246,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   byebug
   carrierwave
   coffee-rails (~> 4.2)
