@@ -9,15 +9,7 @@ class UsersController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def index
-    @users = User.where('name LIKE(?) && id != (?)', "%#{params[:keyword]}%" ,current_user)
-    respond_to do |format|
-      format.html { redirect_to new_group_path }
-      format.json
-    end
-  end
+end
 
 private
 

@@ -8,12 +8,12 @@
       .main-header__left-box
         %h2.main-header__left-box__current-group
           = @group.name
+        %p.main-header__left-box__members  Member : aaa
         %p.main-header__left-box__member
-          Member:
-          = @group.users.pluck(:name).join(", ")
+          = @group_users
       .right-header
         .right-header__button
-          = link_to "Edit", "edit"
+          = link_to "Edit"
     .messages
       = render @messages
     .form
