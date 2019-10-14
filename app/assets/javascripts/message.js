@@ -3,7 +3,7 @@ $(function(){
 
     message.image? image_tag = message.image : image_tag = "";
 
-    var html = `<div class="message">
+    var html = `<div class="message" data-message-id="${message.id}">
                   <div class="message__info">
                     <div class="message__info__user-name">
                       <p>
@@ -48,4 +48,21 @@ $(function(){
     $('.submit-btn').prop('disabled', false);
   })
 })
+
+  var reloadMessages = function(){
+    last_message_id = ($('.message')[0]) ?$('.message:last').data('message-id') : 0;
+    $.ajax({
+      url: location.href,
+      type: 'GET',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      console.log('success');
+    })
+    .fail(function() {
+      console.log('error');
+    });
+  };
 });
+
