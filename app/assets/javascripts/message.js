@@ -1,27 +1,62 @@
 $(function(){
-  function buildHTML(message){
+  var buildHTML = function(message){
 
     message.image? image_tag = message.image : image_tag = "";
 
-    var html = `<div class="message" data-message-id="${message.id}">
-                  <div class="message__info">
-                    <div class="message__info__user-name">
-                      <p>
-                        ${message.user_name}
-                      </p>
+    if (message.content && image_tag) {
+      var html = `<div class="message" data-message-id="${message.id}">
+                    <div class="message__info">
+                      <div class="message__info__user-name">
+                        <p>
+                          ${message.user_name}
+                        </p>
+                      </div>
+                      <div class="message__info__date">
+                        ${message.created_at}
+                      </div>
                     </div>
-                    <div class="message__info__date">
-                       ${message.created_at}
-                    </div>
-                  </div>
-                  <div class="lower-message">
-                      <p class="lower-message__content">
-                        ${message.content}
-                      </p>
-                  <img class="lower-message__image" src=${image_tag}>
-                </div>`
+                    <div class="lower-message">
+                        <p class="lower-message__content">
+                          ${message.content}
+                        </p>
+                    <img class="lower-message__image" src=${image_tag}>
+                  </div>`
+      } else if (message.content){
+        var html = `<div class="message" data-message-id="${message.id}">
+                      <div class="message__info">
+                        <div class="message__info__user-name">
+                          <p>
+                            ${message.user_name}
+                          </p>
+                        </div>
+                        <div class="message__info__date">
+                          ${message.created_at}
+                        </div>
+                      </div>
+                      <div class="lower-message">
+                          <p class="lower-message__content">
+                            ${message.content}
+                          </p>
+                    </div>`
+      } else if (message.image_tag) {
+        var html = `<div class="message" data-message-id="${message.id}">
+                      <div class="message__info">
+                        <div class="message__info__user-name">
+                          <p>
+                            ${message.user_name}
+                          </p>
+                        </div>
+                        <div class="message__info__date">
+                          ${message.created_at}
+                        </div>
+                      </div>
+                      <div class="lower-message">
+                       <img class="lower-message__image" src=${image_tag}>
+                      </div>
+                    </div>`      
+    };
     return html;
-  }
+  };
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
